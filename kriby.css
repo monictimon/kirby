@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(105, 185, 247);
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 13%, rgba(0,212,255,1) 56%);*/
+    height: 100vh;
+}
+
+
+@media only screen and (max-width: 1400px) {
+  body{
+    background-color: rgb(105, 185, 247);
+  }
+}
+
+/*animacion nombre*/
+@keyframes nombre {
+    80%{
+    margin-left: 70%;
+    transform: scale(1.5);
+    }
+    10%{
+     margin-top: 50%;
+    }
+
+   
+    }
+.capa3{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    width: 300px;
+}
+.animacion3{
+    position: absolute;
+     animation: nombre 10s;
+     animation-delay: 1s;
+
+}
+    /*muñeco kirby*/
+@keyframes kirby {
+    0% {left: 0px;}
+    10% {left: 75%;}
+    100% {left: 75%;}
+   }
+
+
+   .capa2{
+     position: absolute;
+     left: 0px;
+     top: 30%;
+     z-index: 2;
+     width: 20%;
+   }
+   
+   .animacion2{
+     position: relative;
+     animation: kirby 10s linear;
+     animation-delay: 2s; 
+   }
+
+   /*animacion nube*/
+
+@keyframes nube {
+    0%{background-image: none;}
+    50%{background-image: url(images/nube.png);}
+    100%{background-image: none;}
+}
+.capa1{
+    position: absolute;
+    left: 0px;
+    top: 300px;
+    z-index: 2;
+    width: 300;
+}
+.animacion1 {
+    position: relative;
+    animation: nube 5s;
+    animation-delay: 2s; 
+}
+.capa4{
+    position: absolute;
+    right: 0px;
+    top: 600px;
+    z-index: 2;
+    width: 300;
+}
+.animacion4 {
+    position: relative;
+    animation: nube 5s;
+    animation-delay: 2s; 
+}
